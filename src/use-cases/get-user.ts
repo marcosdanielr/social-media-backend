@@ -1,6 +1,6 @@
 import { UsersRepository } from "@/repositories/users-repository";
 import { User } from "@prisma/client";
-import { UserAlreadyExistsError } from "./errors/user-already-exists-error";
+import { ResourceNotFound } from "./errors/resource-not-found-error";
 
 interface GetUserUseCaseRequest {
   id: string;
@@ -17,7 +17,7 @@ export class GetUserUseCase {
         const user = await this.usersRepository.findById(id);
 
         if (!user) {
-            throw new UserAlreadyExistsError();
+            throw new ResourceNotFound();
         }
 
         return {
