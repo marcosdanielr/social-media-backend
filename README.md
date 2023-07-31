@@ -2,7 +2,7 @@ SocialMedia app
 
 ## FN (functional requirement)
 
-- [ ] Must be able to sign up;
+- [x] Must be able to sign up;
 - [ ] Must be able to authenticate;
 - [ ] Must be able to get the profile of the logged in user;
 - [ ] Must be able to post;
@@ -17,7 +17,7 @@ SocialMedia app
 - [ ] The user must not be able sign up with an duplicate email;
 
 ## NFR (non-functional requirement)
-- [ ] The user password must be encrypted;
+- [x] The user password must be encrypted;
 - [ ] The application data must be persisted in a PostgreSQL database;
 - [ ] All data list must be paginated;
 - [ ] The user must be identificated by a JWT (JSON Web Token);
