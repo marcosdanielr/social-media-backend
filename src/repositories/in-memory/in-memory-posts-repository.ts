@@ -1,6 +1,6 @@
 import { Post, Prisma } from "@prisma/client";
 import { PostsRepository } from "../posts-repository";
-import { randomUUID } from "crypto";
+import { randomUUID } from "node:crypto";
 
 export class InMemoryPostsRepository implements PostsRepository {
     public posts: Post[] = []; 
@@ -15,6 +15,16 @@ export class InMemoryPostsRepository implements PostsRepository {
         };
 
         this.posts.push(post);
+
+        return post;
+    }
+
+    async findById(id: string) {
+        const post = this.posts.find(item => item.id === id);
+
+        if(!post) {
+            return null;
+        }
 
         return post;
     }
