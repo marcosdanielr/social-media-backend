@@ -1,0 +1,29 @@
+{
+  "name": "social-media-backend",
+  "version": "1.0.0",
+  "description": "SocialMedia app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcosdanielr/social-media-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcosdanielr/social-media-backend/issues"
+  },
+  "homepage": "https://github.com/marcosdanielr/social-media-backend#readme",
+  "dependencies": {
+    "fastify": "4.21.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "6.2.0",
+    "@typescript-eslint/parser": "6.2.0",
+    "eslint": "8.46.0",
+    "typescript": "5.1.6"
+  }
+}
