@@ -22,7 +22,7 @@ describe("Create User Use Case", () => {
         expect(user.id).toEqual(expect.any(String));
     });
 
-    it.only("should not be able to create an user with duplicate email", async () => {
+    it("should not be able to create an user with duplicate email", async () => {
         const email = "marcos@gambiarras.com";
 
         await sut.execute({
