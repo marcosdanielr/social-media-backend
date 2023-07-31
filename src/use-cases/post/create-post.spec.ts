@@ -23,7 +23,7 @@ describe("Create Post Use Case", () => {
         });
 
 
-        const { post } = await  sut.execute({
+        const { post } = await sut.execute({
             user_id: userCreatedResponse.id,
             description: "Au. Auauauauau!"
         });
