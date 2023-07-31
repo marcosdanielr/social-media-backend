@@ -1,7 +1,7 @@
 import { UsersRepository } from "@/repositories/users-repository";
 import { Prisma } from "@prisma/client";
 import { hash } from "bcryptjs";
-import { ResourceNotFound } from "./errors/resource-not-found-error";
+import { ResourceNotFound } from "../errors/resource-not-found-error";
 
 interface UserUpdateData {
   name?: string;
