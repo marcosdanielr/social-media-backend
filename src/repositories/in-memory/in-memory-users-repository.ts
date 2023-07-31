@@ -1,6 +1,7 @@
 import { Prisma, User } from "@prisma/client";
 import { UsersRepository } from "../users-repository";
 import { randomUUID } from "crypto";
+import { GetResult } from "@prisma/client/runtime/library";
 
 export class InMemoryUsersRepository implements UsersRepository {
     public users: User[] = [];
@@ -56,5 +57,19 @@ export class InMemoryUsersRepository implements UsersRepository {
         };
 
         return this.users[index];
+    }
+
+    async deleteById(id: string) {
+        const index = this.users.findIndex(item => item.id === id);
+
+        if (index < 0) {
+            return null;
+        }
+
+        const user = this.users[index];
+
+        this.users.splice(index, 1);
+
+        return user;      
     }
 }
