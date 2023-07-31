@@ -46,8 +46,15 @@ export class InMemoryUsersRepository implements UsersRepository {
             return null;
         }
 
-        this.users[index] = data;
+        const user = this.users[index];
 
-        return data;
+        this.users[index] = {
+            ...user,
+            name: data.name ?? user.name,
+            password_hash: data.password_hash ?? user.password_hash,
+            email: data.email ?? user.email,
+        };
+
+        return this.users[index];
     }
 }
