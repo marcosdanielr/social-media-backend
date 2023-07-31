@@ -5,6 +5,8 @@ SocialMedia app
 - [x] Must be able to sign up;
 - [ ] Must be able to authenticate;
 - [ ] Must be able to get the profile of the logged in user;
+- [ ] Must be able to edit the profile of the logged in user;
+- [ ] Must be able to delete the profile of the logged in user;
 - [ ] Must be able to post;
 - [ ] Must be able to delete post;
 - [ ] Must be able to edit post;
