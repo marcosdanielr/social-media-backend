@@ -16,7 +16,7 @@ SocialMedia app
 - [ ] Must be able to chat;
 
 ## BN (business rule)
-- [ ] The user must not be able sign up with an duplicate email;
+- [x] The user must not be able sign up with an duplicate email;
 
 ## NFR (non-functional requirement)
 - [x] The user password must be encrypted;
