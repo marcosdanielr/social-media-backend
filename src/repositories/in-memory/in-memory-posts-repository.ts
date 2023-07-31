@@ -8,9 +8,8 @@ export class InMemoryPostsRepository implements PostsRepository {
     async create(data: Prisma.PostUncheckedCreateInput) {
         const post: Post = {
             id: randomUUID(),
-            title: data.title,
-            user_id: data.user_id,
             description: data.description,
+            user_id: data.user_id,
             created_at: new Date(),
             updated_at: new Date(),
         };
