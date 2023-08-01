@@ -1,6 +1,6 @@
 import { UsersRepository } from "@/repositories/users-repository";
 import {  User } from "@prisma/client";
-import { ResourceNotFound } from "../errors/resource-not-found-error";
+import { ResourceNotFoundError } from "../errors/resource-not-found-error";
 
 interface DeleteUserUseCaseRequest {
   id: string;
@@ -18,7 +18,7 @@ export class DeleteUserUseCase {
         const userExists = await this.usersRepository.findById(id);
 
         if (!userExists) {
-            throw new ResourceNotFound();
+            throw new ResourceNotFoundError();
         }
 
         const user = await this.usersRepository.deleteById(id);
