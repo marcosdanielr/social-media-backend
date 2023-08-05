@@ -1,7 +1,6 @@
 import { Post, Prisma } from "@prisma/client";
 import { EditPost, PostsRepository } from "../posts-repository";
 import { randomUUID } from "node:crypto";
-import { GetResult } from "@prisma/client/runtime/library";
 
 export class InMemoryPostsRepository implements PostsRepository {
     public posts: Post[] = [];
