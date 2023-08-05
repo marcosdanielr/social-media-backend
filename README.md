@@ -9,7 +9,7 @@ SocialMedia app
 - [ ] Must be able to delete the profile of the logged in user;
 - [x] Must be able to post;
 - [ ] Must be able to delete post;
-- [ ] Must be able to edit post;
+- [x] Must be able to edit post;
 - [ ] Must be able to change post visibility;
 - [ ] Must be able to add friends;
 - [ ] Must be able to remove friends;
