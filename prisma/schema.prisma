@@ -16,19 +16,20 @@ model User {
 
   posts Post[]
 
-  followed_by Follows[] @relation("following")
-  following   Follows[] @relation("follower")
+  followed_by Follow[] @relation("following")
+  following   Follow[] @relation("follower")
 
   @@map("users")
 }
 
-model Follows {
+model Follow {
   follower     User   @relation("follower", fields: [follower_id], references: [id])
   follower_id  String
   following    User   @relation("following", fields: [following_id], references: [id])
   following_id String
 
   @@id([follower_id, following_id])
+  @@map("follows")
 }
 
 model Post {
