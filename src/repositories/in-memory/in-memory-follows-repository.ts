@@ -1,8 +1,8 @@
-import { Follows } from "@prisma/client";
+import { Follow } from "@prisma/client";
 import { FollowsRepository } from "../follows-repository";
 
 export class InMemoryFollowersRepository implements FollowsRepository {
-    public follows: Follows[] = [];
+    public follows: Follow[] = [];
 
     async followById(follower_id: string, following_id: string) {
         this.follows.push({
