@@ -11,5 +11,6 @@ export interface EditPost {
 export interface PostsRepository {
   create(data: Prisma.PostUncheckedCreateInput): Promise<Post>;
   edit({ id, user_id, data }: EditPost): Promise<Post>;
+  deleteById(id: string): Promise<Post>;
   findById(id: string): Promise<Post | null>;
 }

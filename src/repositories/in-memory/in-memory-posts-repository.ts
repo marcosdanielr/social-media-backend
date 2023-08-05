@@ -1,6 +1,7 @@
 import { Post, Prisma } from "@prisma/client";
 import { EditPost, PostsRepository } from "../posts-repository";
 import { randomUUID } from "node:crypto";
+import { GetResult } from "@prisma/client/runtime/library";
 
 export class InMemoryPostsRepository implements PostsRepository {
     public posts: Post[] = [];
@@ -40,5 +41,14 @@ export class InMemoryPostsRepository implements PostsRepository {
         };
 
         return this.posts[index];
+    }
+
+    async deleteById(id: string) {
+        const index = this.posts.findIndex(item => item.id === id);
+        const post = this.posts[index];
+
+        this.posts.splice(index, 1);
+
+        return post;
     }
 } 
