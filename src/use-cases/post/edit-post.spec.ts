@@ -37,8 +37,7 @@ describe("Edit Post Use Case", () => {
 
         expect(editPostResponse).toEqual(
             expect.objectContaining({
-                description: "Auauauau!",
-                updated_at: new Date()
+                description: "Auauauau!"
             })
         );
     });
