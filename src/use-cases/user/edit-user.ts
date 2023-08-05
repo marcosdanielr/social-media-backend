@@ -1,7 +1,7 @@
 import { UsersRepository } from "@/repositories/users-repository";
 import { Prisma } from "@prisma/client";
 import { hash } from "bcryptjs";
-import { ResourceNotFound } from "../errors/resource-not-found-error";
+import { ResourceNotFoundError } from "../errors/resource-not-found-error";
 
 interface UserUpdateData {
   name?: string;
@@ -28,7 +28,7 @@ export class EditUserUseCase {
         const userExists = await this.usersRepository.findById(id);
 
         if (!userExists) {
-            throw new ResourceNotFound();
+            throw new ResourceNotFoundError();
         }
 
         const user = await this.usersRepository.editById(
