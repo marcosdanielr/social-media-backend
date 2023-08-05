@@ -15,13 +15,12 @@ describe("Create Post Use Case", () => {
         sut = new CreatePostUseCase(postsRepository);
     });
 
-    it("should be able create an post", async () => {
+    it("should be able create a post", async () => {
         const userCreatedResponse = await usersRepository.create({
             name: "Ludi",
             email: "ludi@auau.com",
             password_hash: await hash("auauauauau", 6)
         });
-
 
         const { post } = await sut.execute({
             user_id: userCreatedResponse.id,
