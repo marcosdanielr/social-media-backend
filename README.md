@@ -10,9 +10,14 @@ SocialMedia app
 - [x] Must be able to post;
 - [ ] Must be able to delete post;
 - [x] Must be able to edit post;
+- [ ] Must be able to like post;
+- [ ] Must be able to comment post by visibility;
 - [ ] Must be able to change post visibility;
 - [ ] Must be able to add friends;
 - [ ] Must be able to remove friends;
+- [ ] Must be list friends;
+- [ ] Must be search friends;
+- [ ] Must be list users;
 - [ ] Must be able to chat;
 
 ## BN (business rule)
