@@ -13,4 +13,5 @@ export interface PostsRepository {
   edit({ id, user_id, data }: EditPost): Promise<Post>;
   deleteById(id: string): Promise<Post>;
   findById(id: string): Promise<Post | null>;
+  list(user_id: string, page: number, items_per_page: number): Promise<Post[]>;
 }

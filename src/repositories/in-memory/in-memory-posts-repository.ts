@@ -50,4 +50,10 @@ export class InMemoryPostsRepository implements PostsRepository {
 
         return post;
     }
+
+    async list(user_id: string, page: number, items_per_page: number = 20) {
+        const posts = this.posts.filter(item => item.user_id === user_id).slice((page - 1) * items_per_page, page * items_per_page);
+
+        return posts;
+    }
 } 
