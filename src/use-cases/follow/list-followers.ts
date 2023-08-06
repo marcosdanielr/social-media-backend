@@ -3,8 +3,8 @@ import { Follow } from "@prisma/client";
 
 interface ListFollowersUseCaseRequest {
   user_id: string;
-  page: number;
-  items_per_page: number
+  page?: number;
+  items_per_page?: number
 }
 
 interface ListFollowersUseCaseResponse {
