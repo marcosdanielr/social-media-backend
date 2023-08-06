@@ -3,8 +3,8 @@ import { PostsRepository } from "@/repositories/posts-repository";
 
 interface ListPostsUseCaseRequest {
   user_id: string;
-  page: number;
-  items_per_list: number;
+  page?: number;
+  items_per_list?: number;
 }
 
 interface ListPostsUseCaseResponse {
@@ -14,7 +14,7 @@ interface ListPostsUseCaseResponse {
 export class ListPostsUseCase {
     constructor(private postsRepository: PostsRepository) {}
 
-    async execute({ user_id, page, items_per_list }: ListPostsUseCaseRequest): Promise<ListPostsUseCaseResponse> {
+    async execute({ user_id, page = 1, items_per_list = 10 }: ListPostsUseCaseRequest): Promise<ListPostsUseCaseResponse> {
 
         const posts = await this.postsRepository.list(user_id, page, items_per_list);
 
