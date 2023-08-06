@@ -10,4 +10,12 @@ export class InMemoryFollowsRepository implements FollowsRepository {
             following_id
         });
     }
+
+    async unfollowById(follower_id: string, following_id: string) {
+        const index = this.follows.findIndex(item => item.follower_id === follower_id && item.following_id === following_id);
+
+        if (index >= 0) {
+            this.follows.splice(index, 1); 
+        }
+    }
 }
