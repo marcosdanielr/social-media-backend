@@ -8,15 +8,15 @@ SocialMedia app
 - [ ] Must be able to edit the profile of the logged in user;
 - [ ] Must be able to delete the profile of the logged in user;
 - [x] Must be able to post;
-- [ ] Must be able to delete post;
+- [x] Must be able to delete post;
 - [x] Must be able to edit post;
 - [ ] Must be able to like post;
 - [ ] Must be able to comment post by visibility;
 - [ ] Must be able to change post visibility;
-- [ ] Must be able to add friends;
-- [ ] Must be able to remove friends;
-- [ ] Must be list friends;
-- [ ] Must be search friends;
+- [x] Must be able to follow user;
+- [x] Must be able to unfollow user;
+- [x] Must be list followers;
+- [ ] Must be search followers;
 - [ ] Must be list users;
 - [ ] Must be able to chat;
 
@@ -26,5 +26,5 @@ SocialMedia app
 ## NFR (non-functional requirement)
 - [x] The user password must be encrypted;
 - [ ] The application data must be persisted in a PostgreSQL database;
-- [ ] All data list must be paginated;
+- [x] All data list must be paginated;
 - [ ] The user must be identificated by a JWT (JSON Web Token);
