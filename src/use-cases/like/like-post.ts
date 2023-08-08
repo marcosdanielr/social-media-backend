@@ -6,9 +6,9 @@ interface LikePostUseCaseRequest {
 }
 
 export class LikePostUseCase {
-  constructor(private likesRepository: LikesRepository) { }
+    constructor(private likesRepository: LikesRepository) { }
 
-  async execute({ by_id, post_id }: LikePostUseCaseRequest): Promise<void> {
-    await this.likesRepository.likePost(by_id, post_id);
-  }
+    async execute({ by_id, post_id }: LikePostUseCaseRequest): Promise<void> {
+        await this.likesRepository.likePost(by_id, post_id);
+    }
 } 
