@@ -11,8 +11,6 @@ SocialMedia app
 - [x] Must be able to delete post;
 - [x] Must be able to edit post;
 - [ ] Must be able to like post;
-- [ ] Must be able to comment post by visibility;
-- [ ] Must be able to change post visibility;
 - [x] Must be able to follow user;
 - [x] Must be able to unfollow user;
 - [x] Must be list followers;
