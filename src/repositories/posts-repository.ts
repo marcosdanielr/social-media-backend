@@ -9,9 +9,9 @@ export interface EditPost {
 }
 
 export interface PostsRepository {
-  create(data: Prisma.PostUncheckedCreateInput): Promise<Prisma.PostUncheckedCreateInput | Post>;
-  edit({ id, user_id, data }: EditPost): Promise<Prisma.PostUncheckedCreateInput | Post>;
-  deleteById(id: string): Promise<Prisma.PostUncheckedCreateInput | Post>;
-  findById(id: string): Promise<Prisma.PostUncheckedCreateInput | null>;
-  list(user_id: string, page: number, items_per_page: number): Promise<Post[] | Prisma.PostUncheckedCreateInput[]>;
+  create(data: Prisma.PostUncheckedCreateInput): Promise<Post>;
+  edit({ id, user_id, data }: EditPost): Promise<Post>;
+  deleteById(id: string): Promise<Post>;
+  findById(id: string): Promise<Post | null>;
+  list(user_id: string, page: number, items_per_page: number): Promise<Post[]>;
 }

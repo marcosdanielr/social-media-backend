@@ -1,12 +1,12 @@
-import { Prisma } from "@prisma/client";
+import { Post, Prisma } from "@prisma/client";
 import { EditPost, PostsRepository } from "../posts-repository";
 import { randomUUID } from "node:crypto";
 
 export class InMemoryPostsRepository implements PostsRepository {
-    public posts: Prisma.PostUncheckedCreateInput[] = [];
+    public posts: Post[] = [];
 
     async create(data: Prisma.PostUncheckedCreateInput) {
-        const post: Prisma.PostUncheckedCreateInput = {
+        const post: Post = {
             id: randomUUID(),
             description: data.description,
             user_id: data.user_id,
@@ -31,7 +31,7 @@ export class InMemoryPostsRepository implements PostsRepository {
 
     async edit({ id, user_id, data }: EditPost) {
         const index = this.posts.findIndex(item => item.id === id && item.user_id === user_id);
-        const post: Prisma.PostUncheckedCreateInput = this.posts[index];
+        const post: Post = this.posts[index];
 
         this.posts[index] = {
             ...post,
