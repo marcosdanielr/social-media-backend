@@ -16,7 +16,7 @@ SocialMedia app
 - [x] Must be able to unfollow user;
 - [x] Must be list followers;
 - [ ] Must be search followers;
-- [ ] Must be list users;
+- [x] Must be list users;
 - [ ] Must be able to chat;
 
 ## BN (business rule)
