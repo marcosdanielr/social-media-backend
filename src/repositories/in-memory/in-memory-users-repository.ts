@@ -73,7 +73,7 @@ export class InMemoryUsersRepository implements UsersRepository {
     }
 
     async searchByName(name: string) {
-        const users = this.users.filter(item => item.name.toLowerCase() === name.toLowerCase());
+        const users = this.users.filter(item => item.name.toLowerCase().includes(name.toLowerCase()));
 
         return users;
     }
