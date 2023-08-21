@@ -5,9 +5,12 @@ export class InMemoryLikesRepository implements LikesRepository {
     public likes: Like[] = [];
 
     async likePost(by_id: string, post_id: string) {
-        this.likes.push({
+        const like = {
             by_id,
             post_id
-        });
+        };
+
+
+        this.likes.push(like);
     }
 }
