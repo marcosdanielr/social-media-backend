@@ -7,14 +7,14 @@ let postsRepository: InMemoryPostsRepository;
 let likesRepository: InMemoryLikesRepository;
 let sut: LikePostUseCase;
 
-describe("Create Post Use Case", () => {
+describe("Like Post Use Case", () => {
     beforeEach(() => {
         postsRepository = new InMemoryPostsRepository();
         likesRepository = new InMemoryLikesRepository();
         sut = new LikePostUseCase(likesRepository);
     });
 
-    it.only("should be able to like a post", async () => {
+    it("should be able to like a post", async () => {
         const createPostResponse = await postsRepository.create({
             user_id: "user-1",
             description: "Oi"
