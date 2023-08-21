@@ -12,4 +12,14 @@ export class InMemoryLikesRepository implements LikesRepository {
 
         this.likes.push(like);
     }
+  
+    async unlikePost(by_id: string, post_id: string) {
+        const index = this.likes.findIndex(item => item.by_id === by_id && item.post_id === post_id);
+
+        if (index < 0) {
+            return;
+        }
+
+        this.likes.splice(index, 1);
+    }
 }
