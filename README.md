@@ -8,6 +8,7 @@ SocialMedia app
 - [ ] Must be able to edit the profile of the logged in user;
 - [ ] Must be able to delete the profile of the logged in user;
 - [x] Must be able to post;
+- [x] Must be able to list posts of an user;
 - [x] Must be able to delete post;
 - [x] Must be able to edit post;
 - [x] Must be able to like post;
