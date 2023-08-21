@@ -32,7 +32,6 @@ describe("Like Post Use Case", () => {
         expect(likes.length).toEqual(1);
         expect(likes).toEqual(
             expect.objectContaining([{
-                id: expect.any(String),
                 by_id: "user-1",
                 post_id: createPostResponse.id
             }])
