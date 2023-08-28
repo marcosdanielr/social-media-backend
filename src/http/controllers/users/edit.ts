@@ -19,7 +19,7 @@ export async function edit(request: FastifyRequest, reply: FastifyReply) {
 
     const editUserUseCase = makeEditUserUseCase();
 
-    const user = await editUserUseCase.execute({
+    const { user } = await editUserUseCase.execute({
         id: userId,
         data: {
             name,
