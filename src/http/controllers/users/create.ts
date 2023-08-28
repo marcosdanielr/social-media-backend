@@ -23,10 +23,8 @@ export async function create(request: FastifyRequest, reply: FastifyReply) {
         });
 
         return reply.status(Status.CREATED).send({
-            user: {
-                ...user,
-                password_hash: undefined
-            }
+            ...user,
+            password_hash: undefined
         });
 
     } catch (error) {

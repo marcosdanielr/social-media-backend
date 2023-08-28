@@ -29,9 +29,7 @@ export async function edit(request: FastifyRequest, reply: FastifyReply) {
     });
 
     reply.status(Status.OK).send({
-        user: {
-            ...user,
-            password: undefined
-        }
+        ...user,
+        password: undefined
     });
 } 
