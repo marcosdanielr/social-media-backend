@@ -25,6 +25,6 @@ SocialMedia app
 
 ## NFR (non-functional requirement)
 - [x] The user password must be encrypted;
-- [ ] The application data must be persisted in a PostgreSQL database;
+- [x] The application data must be persisted in a PostgreSQL database;
 - [x] All data list must be paginated;
 - [ ] The user must be identificated by a JWT (JSON Web Token);
