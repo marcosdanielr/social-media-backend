@@ -19,7 +19,7 @@ export async function edit(request: FastifyRequest, reply: FastifyReply) {
 
     const editUserUseCase = makeEditUserUseCase();
 
-    const { user } = await editUserUseCase.execute({
+    const user = await editUserUseCase.execute({
         id: userId,
         data: {
             name,
@@ -29,7 +29,9 @@ export async function edit(request: FastifyRequest, reply: FastifyReply) {
     });
 
     reply.status(Status.OK).send({
-        ...user,
-        password: undefined
+        user: {
+            ...user,
+            password: undefined
+        }
     });
 } 

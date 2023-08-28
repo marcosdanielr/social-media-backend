@@ -16,15 +16,17 @@ export async function create(request: FastifyRequest, reply: FastifyReply) {
     try {
         const createUserUseCase = makeCreateUserUseCase();
 
-        const { user } = await createUserUseCase.execute({
+        const user = await createUserUseCase.execute({
             name,
             email,
             password
         });
 
         return reply.status(Status.CREATED).send({
-            ...user,
-            password_hash: undefined
+            user: {
+                ...user,
+                password_hash: undefined
+            }
         });
 
     } catch (error) {
