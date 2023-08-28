@@ -25,12 +25,6 @@ export class EditUserUseCase {
         const { name, email, password } = data;
         const password_hash = password ? await hash(password, 6) : undefined;
 
-        const userExists = await this.usersRepository.findById(id);
-
-        if (!userExists) {
-            throw new ResourceNotFoundError();
-        }
-
         const user = await this.usersRepository.editById(
             id,
             {
