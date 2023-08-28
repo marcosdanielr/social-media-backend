@@ -11,7 +11,7 @@ export class PrismaUsersRepository implements UsersRepository {
             }
         });
 
-        if(userExists) {
+        if (userExists) {
             throw new UserAlreadyExistsError();
         }
 
