@@ -21,4 +21,24 @@ export class PrismaUsersRepository implements UsersRepository {
 
         return user;
     }
+
+    async findByEmail(email: string) {
+        return;
+    }
+
+    async editById(id: string, data: Prisma.UserUpdateInput) {
+        return; 
+    }
+
+    async deleteById(id: string){
+        return;      
+    }
+
+    async searchByName(name: string) {
+        return;      
+    }
+
+    async findById(id: string) {
+        return;      
+    }
 }
