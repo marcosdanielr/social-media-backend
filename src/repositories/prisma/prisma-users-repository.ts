@@ -38,11 +38,20 @@ export class PrismaUsersRepository implements UsersRepository {
     }
 
     async deleteById(id: string){
-        return;      
+        return;   
     }
 
     async searchByName(name: string) {
-        return;      
+        const users = await prisma.user.findMany({
+            where: {
+                name: {
+                    mode: "insensitive",
+                    contains: name ?? "",
+                },
+            }
+        });
+
+        return users;      
     }
 
     async findById(id: string) {
